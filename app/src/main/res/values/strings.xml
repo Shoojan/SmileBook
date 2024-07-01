@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SmileBook</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_people">Friends</string>
+    <string name="nav_notification">Notification</string>
+    <string name="nav_message">Message</string>
+    <string name="nav_menu">Menu</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="profile_name">Jenisha Maharjan</string>
+    <string name="profile_status">Feeling </string>
+    <string name="post_profile_name">Sujan Maharjan</string>
+    <string name="post_time"> mins ago</string>
+    <string name="post_content">Are you guys enjoying it?</string>
+    <string name="like">👍 Like</string>
+    <string name="comment">🗨️ Comment</string>
+    <string name="share">📤 Share</string>
+    <string-array name="emotions">
+        <item>happy! 😁</item>
+        <item>sad! 🥹</item>
+        <item>confident! 😎</item>
+        <item>confused! 😵</item>
+        <item>excited! 🤩</item>
+    </string-array>
+</resources>

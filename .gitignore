@@ -1,0 +1,51 @@
+# Ignore Android Studio specific files
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# Ignore OS generated files
+.DS_Store
+
+# Ignore build output directories
+/build
+/captures
+.externalNativeBuild
+.cxx
+
+# Local configuration files
+local.properties
+
+# Android specific files
+*.apk
+*.ap_
+*.aab
+
+# Android generated files
+gen/
+out/
+
+# Virtual device files
+*.keystore
+*.jks
+*.dsa
+*.ec
+*.rsa
+
+# Google Services (e.g., APIs or Firebase)
+google-services.json
+
+# Log files
+*.log
+
+# Unit test / Android test files
+*.class
+*.jar
+*.war
+*.ear
+bin/

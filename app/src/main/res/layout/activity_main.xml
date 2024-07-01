@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Navigation Bar -->
+    <TableLayout
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/secondary_smile"
+        android:padding="@dimen/layout_padding"
+        android:stretchColumns="0">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/secondary_smile"
+                android:text="@string/app_name"
+                android:textColor="@color/primary_smile"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/navigation_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/secondary_smile"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/home"
+                    android:layout_width="@dimen/nav_button_size"
+                    android:layout_height="@dimen/nav_button_size"
+                    android:layout_margin="@dimen/nav_button_margin"
+                    android:background="@drawable/circular_button"
+                    android:contentDescription="@string/nav_home"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_home_24"
+                    app:tint="@color/secondary_smile" />
+
+                <ImageButton
+                    android:id="@+id/friend"
+                    android:layout_width="@dimen/nav_button_size"
+                    android:layout_height="@dimen/nav_button_size"
+                    android:layout_margin="@dimen/nav_button_margin"
+                    android:background="@drawable/circular_button"
+                    android:contentDescription="@string/nav_people"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_people_alt_24"
+                    app:tint="@color/secondary_smile" />
+
+                <ImageButton
+                    android:id="@+id/message"
+                    android:layout_width="@dimen/nav_button_size"
+                    android:layout_height="@dimen/nav_button_size"
+                    android:layout_margin="@dimen/nav_button_margin"
+                    android:background="@drawable/circular_button"
+                    android:contentDescription="@string/nav_message"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_message_24"
+                    app:tint="@color/secondary_smile" />
+
+                <ImageButton
+                    android:id="@+id/notification"
+                    android:layout_width="@dimen/nav_button_size"
+                    android:layout_height="@dimen/nav_button_size"
+                    android:layout_margin="@dimen/nav_button_margin"
+                    android:background="@drawable/circular_button"
+                    android:contentDescription="@string/nav_notification"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_notifications_24"
+                    app:tint="@color/secondary_smile" />
+
+                <ImageButton
+                    android:id="@+id/menu"
+                    android:layout_width="@dimen/nav_button_size"
+                    android:layout_height="@dimen/nav_button_size"
+                    android:layout_margin="@dimen/nav_button_margin"
+                    android:background="@drawable/circular_button"
+                    android:contentDescription="@string/nav_menu"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baseline_menu_24"
+                    app:tint="@color/secondary_smile" />
+
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+    <!-- Profile Section -->
+    <RelativeLayout
+        android:id="@+id/profile_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigation_bar"
+        android:padding="@dimen/layout_padding">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/profile_image_size"
+            android:layout_height="@dimen/profile_image_size"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/profile_base"
+            android:contentDescription="@string/profile_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar1" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/profile_image"
+            android:text="@string/profile_name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/profile_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_name"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/profile_image"
+            android:text="@string/profile_status"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/profile_emotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_name"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/profile_status"
+            android:entries="@array/emotions" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/separator_line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/profile_section"
+        android:layout_margin="@dimen/layout_padding"
+        android:background="?android:attr/listDivider" />
+
+    <!-- Post Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/post_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/separator_line"
+        android:padding="@dimen/layout_padding">
+
+        <ImageView
+            android:id="@+id/post_profile_image"
+            android:layout_width="@dimen/post_profile_image_size"
+            android:layout_height="@dimen/post_profile_image_size"
+            android:src="@drawable/avatar2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/post_profile_name_edit"
+            android:layout_width="180sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:hint="Sujan Maharjan"
+            app:layout_constraintStart_toEndOf="@id/post_profile_image"
+            app:layout_constraintTop_toTopOf="@id/post_profile_image" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/post_profile_name"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:text="@string/post_profile_name"-->
+        <!--            android:textSize="16sp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toEndOf="@id/post_profile_image"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/post_profile_image" />-->
+
+        <EditText
+            android:id="@+id/post_time_edit"
+            android:layout_width="30sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:inputType="number"
+            android:hint="4"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@id/post_profile_image"
+            app:layout_constraintTop_toBottomOf="@id/post_profile_name_edit" />
+
+        <TextView
+            android:id="@+id/post_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/post_time"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/post_time_edit"
+            app:layout_constraintTop_toBottomOf="@id/post_profile_name_edit"
+            app:layout_constraintBottom_toBottomOf="@id/post_time_edit"/>
+
+        <TextView
+            android:id="@+id/post_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/post_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_time" />
+
+        <RadioGroup
+            android:id="@+id/post_radio_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_text"
+            >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/post_image"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/post_image_height"
+            android:layout_marginTop="8sp"
+            android:src="@drawable/post_image1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_radio_option" />
+
+        <TextView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/table_row_padding"
+            android:text="@string/like"
+            app:layout_constraintEnd_toStartOf="@id/comment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_image" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/table_row_padding"
+            android:text="@string/comment"
+            app:layout_constraintStart_toEndOf="@+id/like"
+            app:layout_constraintTop_toBottomOf="@id/post_image" />
+
+        <TextView
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/table_row_padding"
+            android:text="@string/share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/separator_line2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/post_section"
+        android:layout_margin="@dimen/layout_padding"
+        android:background="?android:attr/listDivider" />
+
+</RelativeLayout>

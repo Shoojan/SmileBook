@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common dimensions -->
+    <dimen name="nav_button_size">40sp</dimen>
+    <dimen name="nav_button_margin">1sp</dimen>
+    <dimen name="padding">4dp</dimen>
+    <dimen name="profile_image_size">80dp</dimen>
+    <dimen name="post_profile_image_size">60dp</dimen>
+    <dimen name="post_image_height">220dp</dimen>
+    <dimen name="layout_padding">12sp</dimen>
+    <dimen name="table_row_padding">18dp</dimen>
+</resources>

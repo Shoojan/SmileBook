@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_smile">#1877F2</color>
+    <color name="secondary_smile">#FFFFFFFF</color>
+    <color name="tertiary_smile">#FF000000</color>
+</resources>
