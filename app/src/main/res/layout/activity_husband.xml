@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".husbandwife.HusbandActivity">
+
+    <TextView
+        android:id="@+id/birthdayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_above="@id/giftSendBtn"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="casual"
+        android:text="It's her birthday 🎈"
+        android:textColor="@color/primary_smile"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/giftsSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/giftSendBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="30dp" />
+
+    <Button
+        android:id="@+id/giftSendBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/husbandImage"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="casual"
+        android:text="Send gift"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/husbandImage"
+        android:layout_width="wrap_content"
+        android:layout_height="300sp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/thinking" />
+
+</RelativeLayout>

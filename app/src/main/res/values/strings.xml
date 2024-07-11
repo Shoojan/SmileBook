@@ -16,9 +16,10 @@
     <string name="share">📤 Share</string>
     <string-array name="emotions">
         <item>happy! 😁</item>
-        <item>sad! 🥹</item>
-        <item>confident! 😎</item>
+        <item>sad! 😔</item>
+        <item>angry! 😡</item>
         <item>confused! 😵</item>
         <item>excited! 🤩</item>
+        <item>irritated! 😤</item>
     </string-array>
 </resources>
