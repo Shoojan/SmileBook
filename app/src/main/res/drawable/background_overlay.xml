@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:src="@drawable/login_background"
+            android:tileMode="disabled"/>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#0F000000"/> <!-- Adjust the transparency here -->
+        </shape>
+    </item>
+</layer-list>

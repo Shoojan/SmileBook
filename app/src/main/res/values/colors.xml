@@ -3,4 +3,5 @@
     <color name="primary_smile">#1877F2</color>
     <color name="secondary_smile">#FFFFFFFF</color>
     <color name="tertiary_smile">#FF000000</color>
+    <color name="background_color">#F5F5F5</color>
 </resources>
