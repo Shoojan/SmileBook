@@ -31,6 +31,11 @@ public class WifeActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 
         TextView giftMessage = findViewById(R.id.giftMessage);
         Spinner replySpinner = findViewById(R.id.replySpinner);
@@ -41,7 +46,7 @@ public class WifeActivity extends AppCompatActivity {
         // Retrieve the gift from HusbandActivity
         Intent intent = getIntent();
         String gift = intent.getStringExtra(Constant.GIFT);
-        giftMessage.setText("Gift 🎁 from Husband: " + gift);
+        giftMessage.setText("Gift 🎁 from him: " + gift);
 
         // Determine the response based on the gift
         replySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -59,7 +64,7 @@ public class WifeActivity extends AppCompatActivity {
         // Reply to HusbandActivity
         replyBtn.setOnClickListener(view -> {
             Intent resultIntent = new Intent();
-            resultIntent.putExtra("response", response);
+            resultIntent.putExtra(Constant.GIFT_RESPONSE, response);
             setResult(RESULT_OK, resultIntent);
             finish(); // Ends WifeActivity and returns to HusbandActivity
         });

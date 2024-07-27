@@ -27,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 
         Intent intent = getIntent();
         String profileName = intent.getStringExtra(Constant.PROFILE_NAME);
@@ -42,5 +47,4 @@ public class MainActivity extends AppCompatActivity {
             startActivity(husbandIntent);
         });
     }
-
 }

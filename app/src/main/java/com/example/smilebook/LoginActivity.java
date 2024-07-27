@@ -26,6 +26,11 @@ public class LoginActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 
         EditText profileNameEditText = findViewById(R.id.nameEditText);
         Button loginButton = findViewById(R.id.loginButton);
@@ -40,6 +45,4 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }
