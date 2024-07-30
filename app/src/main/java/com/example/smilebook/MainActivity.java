@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.smilebook.constants.Constant;
+import com.example.smilebook.fragments.FragmentDemo;
 import com.example.smilebook.husbandwife.HusbandActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
         friendImgBtn.setOnClickListener(view -> {
             Intent husbandIntent = new Intent(MainActivity.this, HusbandActivity.class);
             startActivity(husbandIntent);
+        });
+
+        ImageButton messageImgBtn = findViewById(R.id.message);
+        messageImgBtn.setOnClickListener(view -> {
+            Intent fragmentIntent = new Intent(MainActivity.this, FragmentDemo.class);
+            startActivity(fragmentIntent);
         });
     }
 }

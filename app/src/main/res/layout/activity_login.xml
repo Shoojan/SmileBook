@@ -40,7 +40,6 @@
         android:background="@drawable/edit_text_background"
         android:fontFamily="casual"
         android:hint="Your name please"
-        android:inputType="textCapWords"
         android:padding="12dp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/smileBookImg" />

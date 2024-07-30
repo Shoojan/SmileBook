@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentDemo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FragmentDemo">
+
+    <!-- Heading of the activity -->
+    <TextView
+        android:id="@+id/fragmentDemoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Choose one!"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/colorFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toTopOf="@id/pinkButton"
+        app:layout_constraintTop_toBottomOf="@id/fragmentDemoTitle" />
+
+    <!-- Button to display first fragment -->
+    <Button
+        android:id="@+id/pinkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#FFC0CB	"
+        android:onClick="selectFragment"
+        android:text="Girl"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/blueButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Button to display second fragment -->
+    <Button
+        android:id="@+id/blueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#01A6EA"
+        android:onClick="selectFragment"
+        android:text="Boy"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/pinkButton" />
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
