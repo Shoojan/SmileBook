@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/messageMenu"
+        android:icon="@drawable/baseline_message_24"
+        android:title="Messages"
+        android:titleCondensed="Msg"
+        app:showAsAction="withText"/>
+
+    <!-- Individual menu item -->
+    <item
+        android:id="@+id/mainPage"
+        android:icon="@drawable/avatar1"
+        android:orderInCategory="100"
+        android:title="Menu Item"
+        app:showAsAction="ifRoom" />
+
+    <!-- Group of menu items -->
+    <group
+        android:id="@+id/menu_group_id"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/ajhai_padhney"
+            android:title="अझै पढ्ने" />
+        <item
+            android:id="@+id/aaja_lai_yeti"
+            android:title="आजलाई यति" />
+    </group>
+</menu>

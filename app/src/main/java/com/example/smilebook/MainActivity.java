@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.smilebook.constants.Constant;
 import com.example.smilebook.fragments.FragmentDemo;
 import com.example.smilebook.husbandwife.HusbandActivity;
+import com.example.smilebook.menus.MenuActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,6 +52,13 @@ public class MainActivity extends AppCompatActivity {
         ImageButton messageImgBtn = findViewById(R.id.message);
         messageImgBtn.setOnClickListener(view -> {
             Intent fragmentIntent = new Intent(MainActivity.this, FragmentDemo.class);
+            startActivity(fragmentIntent);
+        });
+
+
+        ImageButton menuImgBtn = findViewById(R.id.menu);
+        menuImgBtn.setOnClickListener(view -> {
+            Intent fragmentIntent = new Intent(MainActivity.this, MenuActivity.class);
             startActivity(fragmentIntent);
         });
     }
