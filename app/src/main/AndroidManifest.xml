@@ -31,10 +31,10 @@
             android:name=".fragments.FragmentDemo"
             android:exported="false" />
         <activity
-            android:name=".husbandwife.WifeActivity"
+            android:name=".intents.WifeActivity"
             android:exported="false" />
         <activity
-            android:name=".husbandwife.HusbandActivity"
+            android:name=".intents.HusbandActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

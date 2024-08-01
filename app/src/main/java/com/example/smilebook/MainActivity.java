@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.smilebook.constants.Constant;
 import com.example.smilebook.fragments.FragmentDemo;
-import com.example.smilebook.husbandwife.HusbandActivity;
+import com.example.smilebook.intents.HusbandActivity;
 import com.example.smilebook.menus.MenuActivity;
 
 public class MainActivity extends AppCompatActivity {

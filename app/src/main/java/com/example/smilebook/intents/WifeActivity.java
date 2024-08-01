@@ -1,4 +1,4 @@
-package com.example.smilebook.husbandwife;
+package com.example.smilebook.intents;
 
 import android.content.Intent;
 import android.os.Bundle;
