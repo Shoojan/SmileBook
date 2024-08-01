@@ -43,8 +43,10 @@
             android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
+        <activity
+            android:name=".list_grid_recycler.ViewAdapterActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

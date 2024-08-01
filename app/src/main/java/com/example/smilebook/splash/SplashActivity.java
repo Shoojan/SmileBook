@@ -18,7 +18,7 @@ import com.example.smilebook.LoginActivity;
 import com.example.smilebook.R;
 
 public class SplashActivity extends AppCompatActivity {
-    private static final int SPLASH_DURATION = 2000; // Duration in milliseconds (3 seconds)
+    private static final int SPLASH_DURATION = 1000; // Duration in milliseconds (3 seconds)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
