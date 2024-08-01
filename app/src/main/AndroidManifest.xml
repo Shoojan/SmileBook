@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".dialogs.DialogActivity"
+            android:exported="false" />
+        <activity
             android:name=".menus.MenuActivity"
             android:exported="false" />
         <activity
