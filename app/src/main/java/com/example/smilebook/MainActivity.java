@@ -16,6 +16,7 @@ import com.example.smilebook.constants.Constant;
 import com.example.smilebook.fragments.FragmentDemo;
 import com.example.smilebook.intents.HusbandActivity;
 import com.example.smilebook.list_grid_recycler.ViewAdapterActivity;
+import com.example.smilebook.maps.MapsActivity;
 import com.example.smilebook.menus.MenuActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,6 +44,12 @@ public class MainActivity extends AppCompatActivity {
         profileNameTextView.setText(profileName);
 
         Toast.makeText(MainActivity.this, "Did you just ignore me?", Toast.LENGTH_LONG).show();
+
+        ImageButton mapHomeImgBtn = findViewById(R.id.home);
+        mapHomeImgBtn.setOnClickListener(view -> {
+            Intent mapIntent = new Intent(MainActivity.this, MapsActivity.class);
+            startActivity(mapIntent);
+        });
 
         ImageButton friendImgBtn = findViewById(R.id.friend);
         friendImgBtn.setOnClickListener(view -> {
