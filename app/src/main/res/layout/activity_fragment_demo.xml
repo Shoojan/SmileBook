@@ -5,7 +5,8 @@
     android:id="@+id/fragmentDemo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.FragmentDemo">
+    tools:context=".fragments.FragmentDemo"
+    android:fitsSystemWindows="true">
 
     <!-- Heading of the activity -->
     <TextView
@@ -15,7 +16,6 @@
         android:layout_marginTop="20dp"
         android:text="Choose one!"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_green_light"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,35 +32,35 @@
 
     <!-- Button to display first fragment -->
     <Button
-        android:id="@+id/pinkButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="#FFC0CB	"
-        android:onClick="selectFragment"
-        android:text="Girl"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/blueButton"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!-- Button to display second fragment -->
-    <Button
         android:id="@+id/blueButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:background="#01A6EA"
-        android:onClick="selectFragment"
-        android:text="Boy"
-        android:textColor="@android:color/black"
+        android:paddingHorizontal="5sp"
+        android:background="@color/primary_smile"
+        android:text="Android 💁‍♀️"
+        android:textColor="@color/secondary_smile"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/pinkButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Button to display second fragment -->
+    <Button
+        android:id="@+id/pinkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:paddingHorizontal="5sp"
+        android:background="@color/primary_smile"
+        android:text="iOS 🤷‍♂️"
+        android:textColor="@color/secondary_smile"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/pinkButton" />
+        app:layout_constraintStart_toEndOf="@id/blueButton" />
     />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

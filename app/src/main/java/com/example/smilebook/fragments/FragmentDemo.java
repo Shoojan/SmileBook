@@ -2,6 +2,7 @@ package com.example.smilebook.fragments;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,22 +22,45 @@ public class FragmentDemo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_fragment_demo);
+
+        Button girlButton = findViewById(R.id.pinkButton);
+        Button boyButton = findViewById(R.id.blueButton);
+
+        boyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadFragment(new BlueFragment());
+            }
+        });
+
+        girlButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadFragment(new PinkFragment());
+            }
+        });
     }
 
 
-    public void selectFragment(View view) {
-        Fragment fragment;
-
-        if (view == findViewById(R.id.blueButton)) {
-            fragment = new BlueFragment();
-        } else {
-            fragment = new PinkFragment();
-        }
+    private void loadFragment(Fragment fragment) {
+//        getSupportFragmentManager().beginTransaction()
+//                .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+//                .replace(R.id.colorFragment, fragment)
+//                .commit();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        fragmentTransaction.setCustomAnimations(
+//                android.R.anim.fade_in,
+//                android.R.anim.fade_out
+//        );
+        fragmentTransaction.setCustomAnimations(
+                android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right
+        );
         fragmentTransaction.replace(R.id.colorFragment, fragment);
+
 
         fragmentTransaction.commit();
 

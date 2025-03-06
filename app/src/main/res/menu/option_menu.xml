@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
         android:id="@+id/messageMenu"
         android:icon="@drawable/baseline_message_24"
         android:title="Messages"
         android:titleCondensed="Msg"
-        app:showAsAction="withText"/>
+        app:showAsAction="withText" />
 
     <!-- Individual menu item -->
     <item
         android:id="@+id/mainPage"
         android:icon="@drawable/avatar1"
-        android:orderInCategory="100"
+        android:orderInCategory="10"
         android:title="Menu Item"
         app:showAsAction="ifRoom" />
 
