@@ -1,0 +1,5 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/offer_bogo" android:title="Buy 1 Get 1 Free 🍟"/>
+    <item android:id="@+id/offer_delivery" android:title="Free Delivery 🛵"/>
+    <item android:id="@+id/offer_mystery" android:title="Mystery Snack 🎲"/>
+</menu>

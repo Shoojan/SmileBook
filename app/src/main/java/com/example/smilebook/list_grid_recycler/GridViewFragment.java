@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -40,44 +41,23 @@ public class GridViewFragment extends Fragment {
         View fragmentView = inflater.inflate(R.layout.fragment_gridview, container, false);
 
         // Find ListView by ID
-        ListView gridView = fragmentView.findViewById(R.id.gridView);
+        GridView gridView = fragmentView.findViewById(R.id.gridView);
 
         // Create ArrayAdapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_gallery_item, memeDescriptions);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, memeDescriptions);
+//        MemeAdapter memeAdapter = new MemeAdapter(requireContext(),this.memeImages,this.memeDescriptions);
 
-        // Set the adapter for ListView
+        // Set the adapter for GridView
         gridView.setAdapter(adapter);
 
         // Set an item click listener for ListView
         gridView.setOnItemClickListener((parent, view, position, id) -> {
             // Display a Toast message with a fun fact
-            String versionName = memeDescriptions[position].split(" ")[0];
-            String message = "Fun fact about " + versionName + ": " + getFunFact(position);
-            Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+            String memeDescription = memeDescriptions[position].split(" ")[0];
+            Toast.makeText(getActivity(), memeDescription, Toast.LENGTH_SHORT).show();
         });
 
         return fragmentView;
     }
 
-    // Method to provide fun facts for each Android version
-    private String getFunFact(int position) {
-        switch (position) {
-            case 0:
-                return "Introduced the on-screen keyboard.";
-            case 1:
-                return "First to support different screen sizes.";
-            case 2:
-                return "Improved memory management.";
-            case 3:
-                return "Introduced picture-in-picture mode.";
-            case 4:
-                return "Enhanced AI capabilities.";
-            case 5:
-                return "Gesture navigation added.";
-            case 6:
-                return "Increased focus on privacy.";
-            default:
-                return "A significant update!";
-        }
-    }
 }

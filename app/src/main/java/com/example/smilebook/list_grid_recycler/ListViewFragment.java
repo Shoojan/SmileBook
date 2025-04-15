@@ -36,7 +36,10 @@ public class ListViewFragment extends Fragment {
         ListView listView = fragmentView.findViewById(R.id.listView);
 
         // Create ArrayAdapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, androidVersions);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                requireContext(),
+                android.R.layout.simple_list_item_1,
+                androidVersions);
 
         // Set the adapter for ListView
         listView.setAdapter(adapter);

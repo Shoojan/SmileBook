@@ -29,7 +29,7 @@ public class ViewAdapterActivity extends AppCompatActivity {
         if (view == findViewById(R.id.listViewButton)) {
             fragment = new ListViewFragment();
         } else if (view == findViewById(R.id.gridViewButton)) {
-            fragment = new ListViewFragment();
+            fragment = new GridViewFragment();
         } else {
             fragment = new ListViewFragment();
         }

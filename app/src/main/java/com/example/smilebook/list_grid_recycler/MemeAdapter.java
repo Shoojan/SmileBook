@@ -39,18 +39,18 @@ public class MemeAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
-//        if (view == null) {
-//            // Inflate custom grid item layout
-//            view = LayoutInflater.from(context).inflate(R.layout.grid_item_meme, parent, false);
-//        }
+        if (view == null) {
+            // Inflate custom grid item layout
+            view = LayoutInflater.from(context).inflate(R.layout.item_view, parent, false);
+        }
 
         // Find ImageView and TextView by ID
-//        ImageView imageView = view.findViewById(R.id.imageView);
-//        TextView textView = view.findViewById(R.id.textView);
-//
-//        // Set image and description
-//        imageView.setImageResource(memeImages[position]);
-//        textView.setText(memeDescriptions[position]);
+        ImageView imageView = view.findViewById(R.id.imageView);
+        TextView textView = view.findViewById(R.id.gridText);
+
+        // Set image and description
+        imageView.setImageResource(memeImages[position]);
+        textView.setText(memeDescriptions[position]);
 
         return view;
     }
